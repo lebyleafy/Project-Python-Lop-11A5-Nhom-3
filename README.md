@@ -6,6 +6,7 @@ Tiếng Việt:
  Ứng dụng sẽ chuyển file PDF thành các loại file: DOC,TXT và đọc file PDF bằng giọng nói của Google.
  <br>
  **LƯU Ý: CHỈ ĐƯỢC SỬ DỤNG FILE PDF CHỈ BAO GỒM CHỮ VÀ KHÔNG CÓ KÝ TỰ ĐẶC BIỆT.
+ <br>
      *-Ứng dụng được lập trình bởi Nguyễn Duy An - Nhóm 3
      
 <hr>
@@ -17,4 +18,5 @@ English:
  The application will convert PDF File to DOC,TXT and Read the PDF with Google voice. 
  <br>
  **REMINDER: ONLY UPLOAD PDF FILE THAT IS ALPHABETIC AND NOT SPECIAL CHARACTERS.
+ <br>
     *-Developed by An Nguyen - Group 3
