@@ -6,6 +6,7 @@ from tkinter.messagebox import showinfo
 import pathlib
 import pyttsx3
 window = tk.Tk()
+
 window.title("PDF File Converter (text only)")
 
 
@@ -63,7 +64,9 @@ label.grid(row=2, column=0, padx=5, pady=5)
 button = ttk.Button(window, text="Select", width=35, command=converttotts)
 button.grid(row=2, column=1, padx=5, pady=5)
 
-
+label = tk.Label(window, text="Developed by Nguyễn Duy An")
+label.grid(row=3, column=0, padx=5, pady=5)
+label.config(font=("Courier", 7))
 
 
 window.mainloop()
