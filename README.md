@@ -1,4 +1,4 @@
-# Du-An-Python-Lop-11A5-Nhom-3
+# Project-Python-Lop-11A5-Nhom-3
 Tiếng Việt:
 <br>
  Sử dụng Tkinter(UI), GTTs(đọc PDF bằng gióng nói), PyPDF2(Chuyển PDF thành file khác).
