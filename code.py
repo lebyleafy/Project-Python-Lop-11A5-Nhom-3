@@ -12,7 +12,7 @@ window = tk.Tk()
 window.title("PDF File Converter (text only)")
 window.wm_iconbitmap('send.ico')
 
-
+#convert pdf file to docx
 def converttodoc():
     file = askopenfile(filetypes=[('PDF Files', '*.pdf')])
     pdf_file = open(file.name, 'rb')
@@ -23,7 +23,7 @@ def converttodoc():
     pathlib.Path('context.doc').write_text(page_content)
     showinfo("Done", "Successfully Converted")
 
-
+#convert pdf file to txt
 def converttotext():
     file = askopenfile(filetypes=[('PDF Files', '*.pdf')])
     pdf_file = open(file.name, 'rb')
@@ -34,7 +34,7 @@ def converttotext():
     pathlib.Path('context.txt').write_text(page_content)
     showinfo("Done", "Successfully Converted")
 
-
+#read pdf file in english
 def converttottsen():
     file = askopenfile(filetypes=[('PDF Files', '*.pdf')])
     pdf_File = open(file.name, 'rb')
@@ -53,7 +53,7 @@ def converttottsen():
     myAudio.save("Audio.mp3")
     os.system("Audio.mp3")
 
-
+#read pdf file in vietnamese
 def converttottsvie():
     file = askopenfile(filetypes=[('PDF Files', '*.pdf')])
     pdf_File = open(file.name, 'rb')
