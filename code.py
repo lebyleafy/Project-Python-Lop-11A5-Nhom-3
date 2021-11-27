@@ -4,11 +4,13 @@ import tkinter.ttk as ttk
 from tkinter.filedialog import askopenfile
 from tkinter.messagebox import showinfo
 import pathlib
-import pyttsx3
+from gtts import gTTS
+import os
+
 window = tk.Tk()
 
 window.title("PDF File Converter (text only)")
-
+window.wm_iconbitmap('send.ico')
 
 def converttodoc():
     file = askopenfile(filetypes=[('PDF Files', '*.pdf')])
@@ -32,14 +34,21 @@ def converttotext():
 
 def converttotts():
     file = askopenfile(filetypes=[('PDF Files', '*.pdf')])
-    pdf_file = open(file.name, 'rb')
-    read_pdf = PyPDF2.PdfFileReader(pdf_file)
-    no_of_pages = read_pdf.getNumPages()
-    page = read_pdf.getPage(0)
-    page_content = page.extractText()
-    speak = pyttsx3.init()
-    speak.say(page_content)
-    speak.runAndWait()
+    pdf_File = open(file.name, 'rb')
+    pdf_Reader = PyPDF2.PdfFileReader(pdf_File)
+    count = pdf_Reader.numPages
+    textList = []
+    for i in range(count):
+        try:
+            page = pdf_Reader.getPage(i)
+            textList.append(page.extractText())
+        except:
+            pass
+    textString = " ".join(textList)
+    language = 'en'
+    myAudio = gTTS(text=textString, lang=language, slow=False)
+    myAudio.save("Audio.mp3")
+    os.system("Audio.mp3")
 
 
 label = tk.Label(window, text="Convert to DOC: ")
